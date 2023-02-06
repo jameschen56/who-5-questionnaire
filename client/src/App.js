@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h2>Week 2:WHO-5 Well-Being Index</h2>
+      <h2>Week 2: WHO-5 Well-Being Index</h2>
     </div>
   );
 }
