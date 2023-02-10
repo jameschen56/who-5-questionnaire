@@ -26,7 +26,6 @@ app.get("/api/get", (req, res) => {
 
 app.post("/api/insert", (req, res) => {
     
-    const uid = req.body.status
     const status = req.body.status
     const q1 = req.body.q1
     const q2 = req.body.q2
@@ -36,8 +35,8 @@ app.post("/api/insert", (req, res) => {
 
     const sqlInsert = "INSERT INTO who5 (status, q1, q2, q3, q4, q5) VALUES (?,?,?,?,?,?)"
     db.query(sqlInsert, [status, q1, q2, q3, q4, q5], (err, result) => {
-        console.log('yyyyyyyyyyyyyyyyyyyyyy', result)
-        console.log('------------------', err)
+        console.log('------result-------', result)
+        console.log('-------err---------', err)
     })
 })
 

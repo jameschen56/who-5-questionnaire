@@ -523,15 +523,25 @@ const RadioApp = () => {
                     </table>
                 </div>
             </div>
-            {/* submit section */ }
-            <div className='flex justify-end m-6'>
+             {/* view section */ }
+            <span className='relative justify-start m-6 top-5 ml-10'>
                 <input
                     type="submit"
-                    value="Submit"
+                    value="View"
                     className='w-32 h-10 bg-teal-600 text-white font-bold rounded-lg cursor-pointer'  
-                    onClick={submitReview}
                 />
-            </div>
+            </span>
+            {/* submit section */ }
+            <span className='ml-40'>
+                <span className='relative justify-end m-6 top-5 left-80 ml-80'>
+                    <input
+                        type="submit"
+                        value="Submit"
+                        className='w-32 h-10 bg-teal-600 text-white font-bold rounded-lg cursor-pointer ml-80'  
+                        onClick={submitReview}
+                    />
+                </span>
+            </span>
         </form>
 
   )
