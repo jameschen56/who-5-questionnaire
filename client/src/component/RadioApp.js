@@ -17,16 +17,19 @@ const RadioApp = () => {
   // submit review
   const submitReview = () => {
     Axios.post("http://localhost:3001/api/insert", {
-        question1: question1,
-        question2: question2,
-        question3: question3,
-        question4: question4,
-        question5: question5
+
+        status: '1',
+        q1: question1,
+        q2: question2,
+        q3: question3,
+        q4: question4,
+        q5: question5
+
     })
 
-    console.log('xxxxxxxxxxxxxxxx')
+    console.log('xxxxxxxxxxxxxxxx', question1)
 
-    setQuestionList([...questionList, {question1: question1, question2: question2, question3:question3, question4:question4, question5:question5}])
+    setQuestionList([...questionList, {status: "1", question1: question1, question2: question2, question3:question3, question4:question4, question5:question5}])
   }
 
   // validating data
@@ -138,9 +141,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative right-80 h-4 w-5 cursor-pointer top-2"
-                                                value="all the same"
+                                                value="5"
                                                 name="qestionnaire1"
-                                                onChange={(e) => {setQuestion1(e.target.value)}}
+                                                onChange={(e) => {setQuestion1(e.target.value="5")}}
                                                 /> 
                                         </span>
                                     </td>
@@ -150,9 +153,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative right-60 h-4 w-5 cursor-pointer top-2"
-                                                value="most of the time"
+                                                value="4"
                                                 name="qestionnaire1"
-                                                onChange={(e) => {setQuestion1(e.target.value)}}
+                                                onChange={(e) => {setQuestion1(e.target.value="4")}}
                                                 />
                                         </span>
                                     </td>
@@ -161,9 +164,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative right-40 h-4 w-5 cursor-pointer top-2"
-                                                value="more than half of the time"
+                                                value="3"
                                                 name="qestionnaire1"
-                                                onChange={(e) => {setQuestion1(e.target.value)}}
+                                                onChange={(e) => {setQuestion1(e.target.value="3")}}
                                                 />
                                         </span>
                                     </td>
@@ -172,9 +175,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative right-20 h-4 w-5 cursor-pointer top-2"
-                                                value="less than half of the time"
+                                                value="2"
                                                 name="qestionnaire1"
-                                                onChange={(e) => {setQuestion1(e.target.value)}}
+                                                onChange={(e) => {setQuestion1(e.target.value="2")}}
                                                 />
                                         </span>
                                     </td>
@@ -183,9 +186,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative left-10 h-4 w-5 cursor-pointer top-2"
-                                                value="some of the time"
+                                                value="1"
                                                 name="qestionnaire1"
-                                                onChange={(e) => {setQuestion1(e.target.value)}}
+                                                onChange={(e) => {setQuestion1(e.target.value="1")}}
                                                 />
                                         </span>
                                     </td>
@@ -194,8 +197,8 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative left-20 h-4 w-5 cursor-pointer top-2"
-                                                value="at no time"     
-                                                onChange={(e) => {setQuestion1(e.target.value)}}                                           
+                                                value="0"     
+                                                onChange={(e) => {setQuestion1(e.target.value="0")}}                                           
                                                 />
                                         </span>
                                     </td>
@@ -214,8 +217,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative right-80 h-4 w-5 cursor-pointer top-2"
+                                                value="5"
                                                 name="qestionnaire2"
-                                                onChange={(e) => {setQuestion2(e.target.value)}}
+                                                onChange={(e) => {setQuestion2(e.target.value="5")}}
                                                 /> 
                                                 
                                         </span>
@@ -226,8 +230,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative right-60 h-4 w-5 cursor-pointer top-2"
+                                                value="4"
                                                 name="qestionnaire2"
-                                                onChange={(e) => {setQuestion2(e.target.value)}}
+                                                onChange={(e) => {setQuestion2(e.target.value="4")}}
                                                 />
                                         </span>
                                     </td>
@@ -236,8 +241,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative right-40 h-4 w-5 cursor-pointer top-2"
+                                                value="3"
                                                 name="qestionnaire2"
-                                                onChange={(e) => {setQuestion2(e.target.value)}}
+                                                onChange={(e) => {setQuestion2(e.target.value="3")}}
                                                 />
                                         </span>
                                     </td>
@@ -246,8 +252,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative right-20 h-4 w-5 cursor-pointer top-2"
+                                                value="2"
                                                 name="qestionnaire2"
-                                                onChange={(e) => {setQuestion2(e.target.value)}}
+                                                onChange={(e) => {setQuestion2(e.target.value="2")}}
                                                 />
                                         </span>
                                     </td>
@@ -256,8 +263,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative left-10 h-4 w-5 cursor-pointer top-2"
+                                                value="1"
                                                 name="qestionnaire2"
-                                                onChange={(e) => {setQuestion2(e.target.value)}}
+                                                onChange={(e) => {setQuestion2(e.target.value="1")}}
                                                 />
                                         </span>
                                     </td>
@@ -266,8 +274,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative left-20 h-4 w-5 cursor-pointer top-2"
+                                                value="0"
                                                 name="qestionnaire2"
-                                                onChange={(e) => {setQuestion2(e.target.value)}}
+                                                onChange={(e) => {setQuestion2(e.target.value="0")}}
                                                 />
                                         </span>
                                     </td>
@@ -286,8 +295,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative right-80 h-4 w-5 cursor-pointer top-2"
+                                                value="5"
                                                 name="qestionnaire3"
-                                                onChange={(e) => {setQuestion3(e.target.value)}}
+                                                onChange={(e) => {setQuestion3(e.target.value="5")}}
                                                 /> 
                                                 
                                         </span>
@@ -298,8 +308,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative right-60 h-4 w-5 cursor-pointer top-2"
+                                                value="4"
                                                 name="qestionnaire3"
-                                                onChange={(e) => {setQuestion3(e.target.value)}}
+                                                onChange={(e) => {setQuestion3(e.target.value="4")}}
                                                 />
                                         </span>
                                     </td>
@@ -308,8 +319,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative right-40 h-4 w-5 cursor-pointer top-2"
+                                                value="3"
                                                 name="qestionnaire3"
-                                                onChange={(e) => {setQuestion3(e.target.value)}}
+                                                onChange={(e) => {setQuestion3(e.target.value="3")}}
                                                 />
                                         </span>
                                     </td>
@@ -318,8 +330,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative right-20 h-4 w-5 cursor-pointer top-2"
+                                                value="2"
                                                 name="qestionnaire3"
-                                                onChange={(e) => {setQuestion3(e.target.value)}}
+                                                onChange={(e) => {setQuestion3(e.target.value="2")}}
                                                 />
                                         </span>
                                     </td>
@@ -328,8 +341,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative left-10 h-4 w-5 cursor-pointer top-2"
+                                                value="1"
                                                 name="qestionnaire3"
-                                                onChange={(e) => {setQuestion3(e.target.value)}}
+                                                onChange={(e) => {setQuestion3(e.target.value="1")}}
                                                 />
                                         </span>
                                     </td>
@@ -338,8 +352,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative left-20 h-4 w-5 cursor-pointer top-2"
+                                                value="0"
                                                 name="qestionnaire3"
-                                                onChange={(e) => {setQuestion3(e.target.value)}}
+                                                onChange={(e) => {setQuestion3(e.target.value="0")}}
                                                 />
                                         </span>
                                     </td>
@@ -358,8 +373,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative right-80 h-4 w-5 cursor-pointer top-2"
+                                                value="5"
                                                 name="qestionnaire4"
-                                                onChange={(e) => {setQuestion4(e.target.value)}}
+                                                onChange={(e) => {setQuestion4(e.target.value="5")}}
                                                 />                                   
                                         </span>
                                     </td>
@@ -369,8 +385,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative right-60 h-4 w-5 cursor-pointer top-2"
+                                                value="4"
                                                 name="qestionnaire4"
-                                                onChange={(e) => {setQuestion4(e.target.value)}}
+                                                onChange={(e) => {setQuestion4(e.target.value="4")}}
                                                 />
                                         </span>
                                     </td>
@@ -379,8 +396,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative right-40 h-4 w-5 cursor-pointer top-2"
+                                                value="3"
                                                 name="qestionnaire4"
-                                                onChange={(e) => {setQuestion4(e.target.value)}}
+                                                onChange={(e) => {setQuestion4(e.target.value="3")}}
                                                 />
                                         </span>
                                     </td>
@@ -389,8 +407,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative right-20 h-4 w-5 cursor-pointer top-2"
+                                                value="2"
                                                 name="qestionnaire4"
-                                                onChange={(e) => {setQuestion4(e.target.value)}}
+                                                onChange={(e) => {setQuestion4(e.target.value="2")}}
                                                 />
                                         </span>
                                     </td>
@@ -399,8 +418,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative left-10 h-4 w-5 cursor-pointer top-2"
+                                                value="1"
                                                 name="qestionnaire4"
-                                                onChange={(e) => {setQuestion4(e.target.value)}}
+                                                onChange={(e) => {setQuestion4(e.target.value="1")}}
                                                 />
                                         </span>
                                     </td>
@@ -409,8 +429,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative left-20 h-4 w-5 cursor-pointer top-2"
+                                                value="0"
                                                 name="qestionnaire4"
-                                                onChange={(e) => {setQuestion4(e.target.value)}}
+                                                onChange={(e) => {setQuestion4(e.target.value="0")}}
                                                 />
                                         </span>
                                     </td>
@@ -429,8 +450,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative right-80 h-4 w-5 cursor-pointer top-2"
+                                                value="5"
                                                 name="qestionnaire5"
-                                                onChange={(e) => {setQuestion5(e.target.value)}}
+                                                onChange={(e) => {setQuestion5(e.target.value="5")}}
                                                 />                                          
                                         </span>
                                     </td>
@@ -440,8 +462,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative right-60 h-4 w-5 cursor-pointer top-2"
+                                                value="4"
                                                 name="qestionnaire5"
-                                                onChange={(e) => {setQuestion5(e.target.value)}}
+                                                onChange={(e) => {setQuestion5(e.target.value="4")}}
                                                 />
                                         </span>
                                     </td>
@@ -450,8 +473,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative right-40 h-4 w-5 cursor-pointer top-2"
+                                                value="3"
                                                 name="qestionnaire5"
-                                                onChange={(e) => {setQuestion5(e.target.value)}}
+                                                onChange={(e) => {setQuestion5(e.target.value="3")}}
                                                 />
                                         </span>
                                     </td>
@@ -460,8 +484,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative right-20 h-4 w-5 cursor-pointer top-2"
+                                                value="2"
                                                 name="qestionnaire5"
-                                                onChange={(e) => {setQuestion5(e.target.value)}}
+                                                onChange={(e) => {setQuestion5(e.target.value="2")}}
                                                 />
                                         </span>
                                     </td>
@@ -470,8 +495,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative left-10 h-4 w-5 cursor-pointer top-2"
+                                                value="1"
                                                 name="qestionnaire5"
-                                                onChange={(e) => {setQuestion5(e.target.value)}}
+                                                onChange={(e) => {setQuestion5(e.target.value="1")}}
                                                 />
                                         </span>
                                     </td>
@@ -480,8 +506,9 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative left-20 h-4 w-5 cursor-pointer top-2"
+                                                value="0"
                                                 name="qestionnaire5"
-                                                onChange={(e) => {setQuestion5(e.target.value)}}
+                                                onChange={(e) => {setQuestion5(e.target.value="0")}}
                                                 />
                                         </span>
                                     </td>
@@ -502,7 +529,7 @@ const RadioApp = () => {
                     type="submit"
                     value="Submit"
                     className='w-32 h-10 bg-teal-600 text-white font-bold rounded-lg cursor-pointer'  
-                    onSubmit={submitReview}
+                    onClick={submitReview}
                 />
             </div>
         </form>
