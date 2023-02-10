@@ -25,8 +25,7 @@ app.get("/api/get", (req, res) => {
 })
 
 app.post("/api/insert", (req, res) => {
-
-    const status = "active"
+    
     const q1 = req.body.q1
     const q2 = req.body.q2
     const q3 = req.body.q3
