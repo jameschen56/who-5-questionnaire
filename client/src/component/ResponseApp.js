@@ -96,8 +96,7 @@ const RadioApp = () => {
 
   return (
 
-      <form onSubmit={validate} className='border-solid border-8 border-slate-200 m-8 '>
-        <div className='mb-8'>
+      <form onSubmit={validate} >
             {/*header section */}
             <div>
                 <p className="text-teal-600 text-xl text-left px-2 m-5">Week2: WHO-5 Well-Being Index</p>
@@ -111,7 +110,7 @@ const RadioApp = () => {
                             
                                 <div className='m-4 px-4'>
                                     <th>Over the last two weeks:</th>
-                                    <th className='px-14'></th>
+                                    <th className='px-16'></th>
                                     <th className='px-28 p-12'></th>
                                     <th>All the time</th>
                                     <th className='px-8'></th>
@@ -524,28 +523,8 @@ const RadioApp = () => {
                     </table>
                 </div>
             </div>
-             {/* view section */ }
-            <span className='relative justify-start m-6 top-5 ml-10'>
-                <input
-                    type="submit"
-                    value="View"
-                    className='w-32 h-10 bg-teal-600 text-white font-bold rounded-lg cursor-pointer'  
-                />
-            </span>
-            {/* submit section */ }
-            <span className='ml-40'>
-                <span className='relative justify-end m-6 top-5 left-60 ml-80'>
-                    <input
-                        type="submit"
-                        value="Submit"
-                        className='w-32 h-10 bg-teal-600 text-white font-bold rounded-lg cursor-pointer ml-80'  
-                        onClick={submitReview}
-                    />
-                </span>
-            </span>
-          </div>
         </form>
-    
+
   )
 }
 
