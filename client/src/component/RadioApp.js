@@ -103,12 +103,11 @@ const RadioApp = () => {
                 <p className="text-teal-600 text-xl text-left px-2 m-5">Week2: WHO-5 Well-Being Index</p>
             </div>
             {/* body section */}
-            <div className='bg-slate-200 w-auto h-auto mx-5 pb-5 rounded-lg'>
+            <div className='bg-slate-200 w-auto h-auto mx-5 pb-2 rounded-lg'>
                 <div>
                     <table className='min-w-full'>
                         <thread>
-                            <tr>
-                            
+                            <tr>           
                                 <div className='m-4 px-4'>
                                     <th>Over the last two weeks:</th>
                                     <th className='px-14'></th>
@@ -131,6 +130,7 @@ const RadioApp = () => {
                                     <th>At no time</th>
                                 </div>
                             </tr> 
+                            <hr className="w-90 h-1 bg-gray-100 border-0 rounded md:my-2 "></hr>
                         </thread>
 
                         <tbody> 
@@ -208,6 +208,7 @@ const RadioApp = () => {
                                             {/* <div className='relative right-80'>Error</div> */}
                                         </span>
                                     </span>
+                    
                                 </span>
                             </tr>
                             <tr>
