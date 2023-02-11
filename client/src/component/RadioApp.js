@@ -87,6 +87,7 @@ const RadioApp = () => {
 
     if (check1 && check2 && check3 && check4 && check5 ) {
         alert("Thank you for completing questionnaire!");
+        document.getElementById('myFrom').reset();
     }
     else  {
         alert("Please select a field");
@@ -96,7 +97,7 @@ const RadioApp = () => {
 
   return (
 
-      <form onSubmit={validate} className='border-solid border-8 border-slate-200 m-8 '>
+      <form onSubmit={validate} className='border-solid border-8 border-slate-200 m-8' id='myFrom'>
         <div className='mb-8'>
             {/*header section */}
             <div>

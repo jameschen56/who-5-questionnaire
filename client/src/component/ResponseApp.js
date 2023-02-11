@@ -11,92 +11,10 @@ const RadioApp = () => {
     const [questionList, setQuestionList] = useState([])
 
 
-  // handle submit 
-  // const onSubmit = data => alert("Thank you for completing questionnaire!");
-
-  // submit review
-  const submitReview = () => {
-    Axios.post("http://localhost:3001/api/insert", {
-
-        status: '1',
-        q1: question1,
-        q2: question2,
-        q3: question3,
-        q4: question4,
-        q5: question5
-
-    })
-
-    console.log('xxxxxxxxxxxxxxxx', question1)
-
-    setQuestionList([...questionList, {status: "1", question1: question1, question2: question2, question3:question3, question4:question4, question5:question5}])
-  }
-
-  // validating data
-  function validate(e) {
-    e.preventDefault();
-    var a = document.getElementsByName("qestionnaire1");
-    var check1 = 0;
-
-    for (var i=0; i < a.length; i++) {
-        if(a[i].checked) {
-            check1 = true;
-            break
-        } 
-    }
-
-    var b = document.getElementsByName("qestionnaire2");
-    var check2 = 0;
-
-    for (var j=0; j < b.length; j++) {
-        if(b[j].checked) {
-            check2 = true;
-            break
-        }
-    }
-
-    var c = document.getElementsByName("qestionnaire3");
-    var check3 = 0;
-
-    for (var k=0; k < c.length; k++) {
-        if(c[k].checked) {
-            check3 = true;
-            break
-        }
-    }
-
-    var d = document.getElementsByName("qestionnaire4");
-    var check4 = false;
-
-    for (var l=0; l < d.length; l++) {
-        if(d[l].checked) {
-            check4 = true;
-            break
-        }
-    }
-
-    var f = document.getElementsByName("qestionnaire5");
-    var check5 = false;
-
-    for (var m=0; m < f.length; m++) {
-        if(f[m].checked) {
-            check5 = true;
-            break
-        }
-    }
-
-    if (check1 && check2 && check3 && check4 && check5 ) {
-        alert("Thank you for completing questionnaire!");
-    }
-    else  {
-        alert("Please select a field");
-
-    }
-  }
 
   return (
 
-      <form onSubmit={validate} >
+      <form>
             {/*header section */}
             <div>
                 <p className="text-teal-600 text-xl text-left px-2 m-5">Week2: WHO-5 Well-Being Index</p>

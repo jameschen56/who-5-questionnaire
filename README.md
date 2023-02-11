@@ -30,4 +30,6 @@ This page is a WHO-5 questionnaire on patient portal. Users can fill this form a
 ## WHO-5 questionnaire
 <img width="1447" alt="image" src="https://user-images.githubusercontent.com/87781597/218261074-159a99b7-65c7-426d-9eb2-0c8344a779ee.png">
 
+## View questionnaire
+
 
