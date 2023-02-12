@@ -13,17 +13,3 @@ root.render(
   document.getElementById('root')
 );
 
-// const Root = () => {
-//   return (
-//     <BrowserRouter>
-//       <App />
-//     </BrowserRouter>
-//   )
-// }
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//       <Root />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// )

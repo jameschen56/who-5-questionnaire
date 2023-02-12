@@ -12,9 +12,6 @@ const RadioApp = () => {
     const [questionList, setQuestionList] = useState([])
 
 
-  // handle submit 
-  // const onSubmit = data => alert("Thank you for completing questionnaire!");
-
   // submit review
   const submitReview = () => {
     Axios.post("http://localhost:3001/api/insert", {
@@ -28,9 +25,10 @@ const RadioApp = () => {
 
     })
 
-    console.log('xxxxxxxxxxxxxxxx', question1)
-
+    
     setQuestionList([...questionList, {status: "1", question1: question1, question2: question2, question3:question3, question4:question4, question5:question5}])
+    console.log('xxxxxxxxxxxxxxxx', setQuestionList)
+
   }
 
   // validating data
@@ -200,7 +198,8 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative left-20 h-4 w-5 cursor-pointer top-2"
-                                                value="0"     
+                                                value="0" 
+                                                name="qestionnaire1"    
                                                 onChange={(e) => {setQuestion1(e.target.value="0")}}                                           
                                                 />
                                         </span>

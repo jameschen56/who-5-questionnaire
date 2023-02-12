@@ -1,5 +1,5 @@
 # Description
-This page is a WHO-5 questionnaire on patient portal. Users can fill this form and click Submit. User can view completed questionnaire but cannot change the response after submitting.
+This page is a WHO-5 questionnaire on patient portal. Users can fill this form and click Submit. Users can view completed questionnaire but cannot change the response after submitting.
 
 # Technologies
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" style="width:75px;" />
@@ -30,6 +30,8 @@ This page is a WHO-5 questionnaire on patient portal. Users can fill this form a
 ## WHO-5 questionnaire
 <img width="1447" alt="image" src="https://user-images.githubusercontent.com/87781597/218261074-159a99b7-65c7-426d-9eb2-0c8344a779ee.png">
 
-## View questionnaire
+## Database Schema (MySQL)
+<img width="756" alt="image" src="https://user-images.githubusercontent.com/87781597/218297820-88edc097-df52-4075-ae2c-bc52f5f813aa.png">
+
 
 

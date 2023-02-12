@@ -1,5 +1,6 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { Link } from "react-router-dom"; 
+import Axios from 'axios'
 
 const ResponseApp = () => {
 
@@ -10,6 +11,20 @@ const ResponseApp = () => {
     const [question5, setQuestion5] = useState('')
     const [questionList, setQuestionList] = useState([])
 
+
+    useEffect(() => {
+        Axios.get("http://localhost:3001/api/get").then((response) => {
+            console.log('&&&&&&&&&&&', response.data[0])
+        //   console.log('######', setQuestion1(response.data[0].q1))
+        //   setQuestion2(response.data[0].q2)
+        //   setQuestion3(response.data[0].q3)
+        //   setQuestion4(response.data[0].q4)
+        //   setQuestion5(response.data[0].q5)
+        })
+      })
+    
+    // console.log('--------------', response.data[0].q1)
+    // console.log('---------', setQuestion1(response.data[0].q1)
 
   return (
 
@@ -61,7 +76,6 @@ const ResponseApp = () => {
                                             className="peer relative right-80 h-4 w-5 cursor-pointer top-2"
                                             value="5"
                                             name="qestionnaire1"
-                                            onChange={(e) => {setQuestion1(e.target.value="5")}}
                                             /> 
                                     </span>
                                 </td>
@@ -442,7 +456,7 @@ const ResponseApp = () => {
                 </table>
             </div>
         </div>
-         {/* view section */ }
+         {/* back section */ }
         <span className='relative justify-start m-6 top-5 ml-10'>
             <Link
                 type="submit"
