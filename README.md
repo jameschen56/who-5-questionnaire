@@ -15,8 +15,8 @@ This page is a WHO-5 questionnaire on patient portal. Users can fill this form a
 2. Install dependencies from the root directory.
 -- `npm install`
 
-3. Create a MySQL user with CREATEDB and PASSWORD in PSQL.
--- `CREATE USER <name> WITH CREATEDB PASSWORD <'password'>`
+3. Create a MySQL user, password, and database.
+
 
 4. Start the serveices in the backend directory.
 --`npm run devStart`

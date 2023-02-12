@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
-import Axios from 'axios'
 
-const RadioApp = () => {
+const ResponseApp = () => {
 
     const [question1, setQuestion1] = useState('')
     const [question2, setQuestion2] = useState('')
@@ -9,7 +8,6 @@ const RadioApp = () => {
     const [question4, setQuestion4] = useState('')
     const [question5, setQuestion5] = useState('')
     const [questionList, setQuestionList] = useState([])
-
 
 
   return (
@@ -446,4 +444,4 @@ const RadioApp = () => {
   )
 }
 
-export default RadioApp
+export default ResponseApp
