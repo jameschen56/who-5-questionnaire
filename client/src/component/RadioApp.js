@@ -529,11 +529,12 @@ const RadioApp = () => {
             </div>
              {/* view section */ }
             <span className='relative justify-start m-6 top-5 ml-10'>
-                <input
+                <Link
                     type="submit"
                     value="View"
-                    className='w-32 h-10 bg-teal-600 text-white font-bold rounded-lg cursor-pointer'  
-                />
+                    className='w-32 h-10 bg-teal-600 text-white text-center inline-block align-middle font-bold rounded-lg cursor-pointer'  
+                    to="/qestionnaire"
+                >View </Link>
             </span>
             {/* submit section */ }
             <span className='ml-40'>

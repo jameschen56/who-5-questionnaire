@@ -8,12 +8,14 @@ function App() {
 
   return (
     <div>
-      <Route path='/'>
-        <RadioApp />
-      </Route>
-      <Route path='/qestionnaire'>
-        <ResponseApp />  
-      </Route>
+      <Switch>
+        <Route exact path='/'>
+          <RadioApp />
+        </Route>
+        <Route exact path='/qestionnaire'>
+          <ResponseApp />  
+        </Route>
+      </Switch>
     </div>
   );
 }
