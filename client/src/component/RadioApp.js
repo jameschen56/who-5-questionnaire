@@ -4,11 +4,11 @@ import Axios from 'axios'
 
 const RadioApp = () => {
 
-    const [question1, setQuestion1] = useState('')
-    const [question2, setQuestion2] = useState('')
-    const [question3, setQuestion3] = useState('')
-    const [question4, setQuestion4] = useState('')
-    const [question5, setQuestion5] = useState('')
+    const [question1, setQuestion1] = useState(-1)
+    const [question2, setQuestion2] = useState(-1)
+    const [question3, setQuestion3] = useState(-1)
+    const [question4, setQuestion4] = useState(-1)
+    const [question5, setQuestion5] = useState(-1)
     const [questionList, setQuestionList] = useState([])
 
 
@@ -27,7 +27,6 @@ const RadioApp = () => {
 
     
     setQuestionList([...questionList, {status: "1", question1: question1, question2: question2, question3:question3, question4:question4, question5:question5}])
-    console.log('xxxxxxxxxxxxxxxx', setQuestionList)
 
   }
 
@@ -204,12 +203,6 @@ const RadioApp = () => {
                                                 />
                                         </span>
                                     </td>
-                                    <span className='relative right-60 top-4'>
-                                        <span className='relative right-80'>
-                                            {/* <div className='relative right-80'>Error</div> */}
-                                        </span>
-                                    </span>
-                    
                                 </span>
                             </tr>
                             <tr>
@@ -283,11 +276,6 @@ const RadioApp = () => {
                                                 />
                                         </span>
                                     </td>
-                                    <span className='relative right-60 top-4'>
-                                        <span className='relative right-80'>
-                                            {/* <div className='relative right-80'>Error</div> */}
-                                        </span>
-                                    </span>
                                 </span>
                             </tr>
                             <tr>
@@ -361,11 +349,6 @@ const RadioApp = () => {
                                                 />
                                         </span>
                                     </td>
-                                    <span className='relative right-60 top-4'>
-                                        <span className='relative right-80'>
-                                            {/* <div className='relative right-80'>Error</div> */}
-                                        </span>
-                                    </span>
                                 </span>
                             </tr>
                             <tr>
@@ -438,11 +421,6 @@ const RadioApp = () => {
                                                 />
                                         </span>
                                     </td>
-                                    <span className='relative right-60 top-4'>
-                                        <span className='relative right-80'>
-                                            {/* <div className='relative right-80'>Error</div> */}
-                                        </span>
-                                    </span>
                                 </span>
                             </tr>
                             <tr>
@@ -515,11 +493,6 @@ const RadioApp = () => {
                                                 />
                                         </span>
                                     </td>
-                                    <span className='relative right-60 top-4'>
-                                        <span className='relative right-80'>
-                                            {/* <div className='relative right-80'>Error</div> */}
-                                        </span>
-                                    </span>
                                 </span>
                             </tr>
                         </tbody>
