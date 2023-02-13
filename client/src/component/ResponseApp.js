@@ -4,12 +4,6 @@ import Axios from 'axios'
 
 const ResponseApp = () => {
 
-    const [question1, setQuestion1] = useState(-1)
-    const [question2, setQuestion2] = useState(-1)
-    const [question3, setQuestion3] = useState(-1)
-    const [question4, setQuestion4] = useState(-1)
-    const [question5, setQuestion5] = useState(-1)
-    // const {questions, setQuestions} = useState({})
     const [questionList, setQuestionList] = useState([])
 
     useEffect(() => {
@@ -20,13 +14,11 @@ const ResponseApp = () => {
         })
     }, [])
     
-    // console.log('--------------', response.data[0].q1)
-    // console.log('---------', setQuestion1(response.data[0].q1)
 
   return (
 
     <form  className='border-solid border-8 border-slate-200 m-8' id='myFrom'>
-    <div className='mb-8'>
+      <div className='mb-8'>
         {/*header section */}
         <div>
             <p className="text-teal-600 text-xl text-left px-2 m-5">Week2: WHO-5 Well-Being Index</p>
@@ -62,11 +54,6 @@ const ResponseApp = () => {
                         <hr className="w-90 h-1 bg-gray-100 border-0 rounded md:my-2 "></hr>
                     </thread>
 
-                    {/* <span>testing q1: {questionList.q1}</span>
-                    <span>testing q2: {questionList.q2}</span>
-                    <span>testing q3: {questionList.q3}</span>
-                    <span>testing q4: {questionList.q4}</span>
-                    <span>testing q5: {questionList.q5}</span> */}
 
                     <tbody> 
                         <tr>
@@ -77,8 +64,6 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative right-80 h-4 w-5 cursor-pointer top-2"
-                                            value="5"
-                                            name="qestionnaire1"
                                             checked={questionList.q1 === 5}
                                             /> 
                                     </span>
@@ -89,9 +74,6 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative right-60 h-4 w-5 cursor-pointer top-2"
-                                            value="4"
-                                            name="qestionnaire1"
-                                            onChange={(e) => {setQuestion1(e.target.value="4")}}
                                             checked={questionList.q1 === 4}
                                             />
                                     </span>
@@ -101,9 +83,6 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative right-40 h-4 w-5 cursor-pointer top-2"
-                                            value="3"
-                                            name="qestionnaire1"
-                                            onChange={(e) => {setQuestion1(e.target.value="3")}}
                                             checked={questionList.q1 === 3}
                                             />
                                     </span>
@@ -113,9 +92,6 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative right-20 h-4 w-5 cursor-pointer top-2"
-                                            value="2"
-                                            name="qestionnaire1"
-                                            onChange={(e) => {setQuestion1(e.target.value="2")}}
                                             checked={questionList.q1 === 2}
                                             />
                                     </span>
@@ -125,9 +101,6 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative left-10 h-4 w-5 cursor-pointer top-2"
-                                            value="1"
-                                            name="qestionnaire1"
-                                            onChange={(e) => {setQuestion1(e.target.value="1")}}
                                             checked={questionList.q1 === 1}
                                             />
                                     </span>
@@ -137,18 +110,10 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative left-20 h-4 w-5 cursor-pointer top-2"
-                                            value="0"     
-                                            onChange={(e) => {setQuestion1(e.target.value="0")}}
                                             checked={questionList.q1 === 0}                                           
                                             />
                                     </span>
                                 </td>
-                                <span className='relative right-60 top-4'>
-                                    <span className='relative right-80'>
-                                        {/* <div className='relative right-80'>Error</div> */}
-                                    </span>
-                                </span>
-                
                             </span>
                         </tr>
                         <tr>
@@ -159,9 +124,6 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative right-80 h-4 w-5 cursor-pointer top-2"
-                                            value="5"
-                                            name="qestionnaire2"
-                                            onChange={(e) => {setQuestion2(e.target.value="5")}}
                                             checked={questionList.q2 === 5}
                                             /> 
                                             
@@ -173,9 +135,6 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative right-60 h-4 w-5 cursor-pointer top-2"
-                                            value="4"
-                                            name="qestionnaire2"
-                                            onChange={(e) => {setQuestion2(e.target.value="4")}}
                                             checked={questionList.q2 === 4}
                                             />
                                     </span>
@@ -185,9 +144,6 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative right-40 h-4 w-5 cursor-pointer top-2"
-                                            value="3"
-                                            name="qestionnaire2"
-                                            onChange={(e) => {setQuestion2(e.target.value="3")}}
                                             checked={questionList.q2 === 3}
                                             />
                                     </span>
@@ -197,9 +153,6 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative right-20 h-4 w-5 cursor-pointer top-2"
-                                            value="2"
-                                            name="qestionnaire2"
-                                            onChange={(e) => {setQuestion2(e.target.value="2")}}
                                             checked={questionList.q2 === 2}
                                             />
                                     </span>
@@ -209,9 +162,6 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative left-10 h-4 w-5 cursor-pointer top-2"
-                                            value="1"
-                                            name="qestionnaire2"
-                                            onChange={(e) => {setQuestion2(e.target.value="1")}}
                                             checked={questionList.q2 === 1}
                                             />
                                     </span>
@@ -221,18 +171,10 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative left-20 h-4 w-5 cursor-pointer top-2"
-                                            value="0"
-                                            name="qestionnaire2"
-                                            onChange={(e) => {setQuestion2(e.target.value="0")}}
                                             checked={questionList.q2 === 0}
                                             />
                                     </span>
                                 </td>
-                                <span className='relative right-60 top-4'>
-                                    <span className='relative right-80'>
-                                        {/* <div className='relative right-80'>Error</div> */}
-                                    </span>
-                                </span>
                             </span>
                         </tr>
                         <tr>
@@ -243,12 +185,8 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative right-80 h-4 w-5 cursor-pointer top-2"
-                                            value="5"
-                                            name="qestionnaire3"
-                                            onChange={(e) => {setQuestion3(e.target.value="5")}}
                                             checked={questionList.q3 === 5}
-                                            /> 
-                                            
+                                          />                                             
                                     </span>
                                 </td>
                                 
@@ -257,9 +195,6 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative right-60 h-4 w-5 cursor-pointer top-2"
-                                            value="4"
-                                            name="qestionnaire3"
-                                            onChange={(e) => {setQuestion3(e.target.value="4")}}
                                             checked={questionList.q3 === 4}
                                             />
                                     </span>
@@ -269,9 +204,6 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative right-40 h-4 w-5 cursor-pointer top-2"
-                                            value="3"
-                                            name="qestionnaire3"
-                                            onChange={(e) => {setQuestion3(e.target.value="3")}}
                                             checked={questionList.q3 === 3}
                                             />
                                     </span>
@@ -281,9 +213,6 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative right-20 h-4 w-5 cursor-pointer top-2"
-                                            value="2"
-                                            name="qestionnaire3"
-                                            onChange={(e) => {setQuestion3(e.target.value="2")}}
                                             checked={questionList.q3 === 2}
                                             />
                                     </span>
@@ -293,9 +222,6 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative left-10 h-4 w-5 cursor-pointer top-2"
-                                            value="1"
-                                            name="qestionnaire3"
-                                            onChange={(e) => {setQuestion3(e.target.value="1")}}
                                             checked={questionList.q3 === 1}
                                             />
                                     </span>
@@ -305,18 +231,10 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative left-20 h-4 w-5 cursor-pointer top-2"
-                                            value="0"
-                                            name="qestionnaire3"
-                                            onChange={(e) => {setQuestion3(e.target.value="0")}}
                                             checked={questionList.q3 === 0}
                                             />
                                     </span>
                                 </td>
-                                <span className='relative right-60 top-4'>
-                                    <span className='relative right-80'>
-                                        {/* <div className='relative right-80'>Error</div> */}
-                                    </span>
-                                </span>
                             </span>
                         </tr>
                         <tr>
@@ -327,9 +245,6 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative right-80 h-4 w-5 cursor-pointer top-2"
-                                            value="5"
-                                            name="qestionnaire4"
-                                            onChange={(e) => {setQuestion4(e.target.value="5")}}
                                             checked={questionList.q4 === 5}
                                             />                                   
                                     </span>
@@ -340,9 +255,6 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative right-60 h-4 w-5 cursor-pointer top-2"
-                                            value="4"
-                                            name="qestionnaire4"
-                                            onChange={(e) => {setQuestion4(e.target.value="4")}}
                                             checked={questionList.q4 === 4}
                                             />
                                     </span>
@@ -352,9 +264,6 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative right-40 h-4 w-5 cursor-pointer top-2"
-                                            value="3"
-                                            name="qestionnaire4"
-                                            onChange={(e) => {setQuestion4(e.target.value="3")}}
                                             checked={questionList.q4 === 3}
                                             />
                                     </span>
@@ -364,9 +273,6 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative right-20 h-4 w-5 cursor-pointer top-2"
-                                            value="2"
-                                            name="qestionnaire4"
-                                            onChange={(e) => {setQuestion4(e.target.value="2")}}
                                             checked={questionList.q4 === 2}
                                             />
                                     </span>
@@ -376,9 +282,6 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative left-10 h-4 w-5 cursor-pointer top-2"
-                                            value="1"
-                                            name="qestionnaire4"
-                                            onChange={(e) => {setQuestion4(e.target.value="1")}}
                                             checked={questionList.q4 === 1}
                                             />
                                     </span>
@@ -388,18 +291,10 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative left-20 h-4 w-5 cursor-pointer top-2"
-                                            value="0"
-                                            name="qestionnaire4"
-                                            onChange={(e) => {setQuestion4(e.target.value="0")}}
                                             checked={questionList.q4 === 0}
                                             />
                                     </span>
                                 </td>
-                                <span className='relative right-60 top-4'>
-                                    <span className='relative right-80'>
-                                        {/* <div className='relative right-80'>Error</div> */}
-                                    </span>
-                                </span>
                             </span>
                         </tr>
                         <tr>
@@ -410,9 +305,6 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative right-80 h-4 w-5 cursor-pointer top-2"
-                                            value="5"
-                                            name="qestionnaire5"
-                                            onChange={(e) => {setQuestion5(e.target.value="5")}}
                                             checked={questionList.q5 === 5}
                                             />                                          
                                     </span>
@@ -423,9 +315,6 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative right-60 h-4 w-5 cursor-pointer top-2"
-                                            value="4"
-                                            name="qestionnaire5"
-                                            onChange={(e) => {setQuestion5(e.target.value="4")}}
                                             checked={questionList.q5 === 4}
                                             />
                                     </span>
@@ -435,9 +324,6 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative right-40 h-4 w-5 cursor-pointer top-2"
-                                            value="3"
-                                            name="qestionnaire5"
-                                            onChange={(e) => {setQuestion5(e.target.value="3")}}
                                             checked={questionList.q5 === 3}
                                             />
                                     </span>
@@ -447,9 +333,6 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative right-20 h-4 w-5 cursor-pointer top-2"
-                                            value="2"
-                                            name="qestionnaire5"
-                                            onChange={(e) => {setQuestion5(e.target.value="2")}}
                                             checked={questionList.q5 === 2}
                                             />
                                     </span>
@@ -459,9 +342,6 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative left-10 h-4 w-5 cursor-pointer top-2"
-                                            value="1"
-                                            name="qestionnaire5"
-                                            onChange={(e) => {setQuestion5(e.target.value="1")}}
                                             checked={questionList.q5 === 1}
                                             />
                                     </span>
@@ -471,18 +351,10 @@ const ResponseApp = () => {
                                         <input 
                                             type="radio" 
                                             className="peer relative left-20 h-4 w-5 cursor-pointer top-2"
-                                            value="0"
-                                            name="qestionnaire5"
-                                            onChange={(e) => {setQuestion5(e.target.value="0")}}
                                             checked={questionList.q5 === 0}
                                             />
                                     </span>
                                 </td>
-                                <span className='relative right-60 top-4'>
-                                    <span className='relative right-80'>
-                                        {/* <div className='relative right-80'>Error</div> */}
-                                    </span>
-                                </span>
                             </span>
                         </tr>
                     </tbody>
@@ -499,7 +371,6 @@ const ResponseApp = () => {
         </span>
       </div>
     </form>
-
   )
 }
 

@@ -24,7 +24,6 @@ app.get("/api/get", (req, res) => {
         if (err) {
             console.log('err', err)
         } else{
-            console.log('------------', result)
             res.send(result)
         }
     })
@@ -46,8 +45,6 @@ app.post("/api/insert", (req, res) => {
         if (err) {
             console.log('err', err)
         } else {
-            console.log('---------------------', res)
-            console.log('*********************', result)
             res.status(200).send("registration successful");
         }
     })
