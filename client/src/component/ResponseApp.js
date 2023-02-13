@@ -4,24 +4,21 @@ import Axios from 'axios'
 
 const ResponseApp = () => {
 
-    const [question1, setQuestion1] = useState('')
-    const [question2, setQuestion2] = useState('')
-    const [question3, setQuestion3] = useState('')
-    const [question4, setQuestion4] = useState('')
-    const [question5, setQuestion5] = useState('')
+    const [question1, setQuestion1] = useState(-1)
+    const [question2, setQuestion2] = useState(-1)
+    const [question3, setQuestion3] = useState(-1)
+    const [question4, setQuestion4] = useState(-1)
+    const [question5, setQuestion5] = useState(-1)
+    // const {questions, setQuestions} = useState({})
     const [questionList, setQuestionList] = useState([])
-
 
     useEffect(() => {
         Axios.get("http://localhost:3001/api/get").then((response) => {
-            console.log('&&&&&&&&&&&', response.data[0])
-        //   console.log('######', setQuestion1(response.data[0].q1))
-        //   setQuestion2(response.data[0].q2)
-        //   setQuestion3(response.data[0].q3)
-        //   setQuestion4(response.data[0].q4)
-        //   setQuestion5(response.data[0].q5)
+            if(response.data[0]) {
+                setQuestionList(response.data[0])
+            }
         })
-      })
+    }, [])
     
     // console.log('--------------', response.data[0].q1)
     // console.log('---------', setQuestion1(response.data[0].q1)
@@ -65,6 +62,12 @@ const ResponseApp = () => {
                         <hr className="w-90 h-1 bg-gray-100 border-0 rounded md:my-2 "></hr>
                     </thread>
 
+                    {/* <span>testing q1: {questionList.q1}</span>
+                    <span>testing q2: {questionList.q2}</span>
+                    <span>testing q3: {questionList.q3}</span>
+                    <span>testing q4: {questionList.q4}</span>
+                    <span>testing q5: {questionList.q5}</span> */}
+
                     <tbody> 
                         <tr>
                             <td className='text-left py-4 px-4 '>1. I have felt cheerful and in good spirits</td>
@@ -76,6 +79,7 @@ const ResponseApp = () => {
                                             className="peer relative right-80 h-4 w-5 cursor-pointer top-2"
                                             value="5"
                                             name="qestionnaire1"
+                                            checked={questionList.q1 === 5}
                                             /> 
                                     </span>
                                 </td>
@@ -88,6 +92,7 @@ const ResponseApp = () => {
                                             value="4"
                                             name="qestionnaire1"
                                             onChange={(e) => {setQuestion1(e.target.value="4")}}
+                                            checked={questionList.q1 === 4}
                                             />
                                     </span>
                                 </td>
@@ -99,6 +104,7 @@ const ResponseApp = () => {
                                             value="3"
                                             name="qestionnaire1"
                                             onChange={(e) => {setQuestion1(e.target.value="3")}}
+                                            checked={questionList.q1 === 3}
                                             />
                                     </span>
                                 </td>
@@ -110,6 +116,7 @@ const ResponseApp = () => {
                                             value="2"
                                             name="qestionnaire1"
                                             onChange={(e) => {setQuestion1(e.target.value="2")}}
+                                            checked={questionList.q1 === 2}
                                             />
                                     </span>
                                 </td>
@@ -121,6 +128,7 @@ const ResponseApp = () => {
                                             value="1"
                                             name="qestionnaire1"
                                             onChange={(e) => {setQuestion1(e.target.value="1")}}
+                                            checked={questionList.q1 === 1}
                                             />
                                     </span>
                                 </td>
@@ -130,7 +138,8 @@ const ResponseApp = () => {
                                             type="radio" 
                                             className="peer relative left-20 h-4 w-5 cursor-pointer top-2"
                                             value="0"     
-                                            onChange={(e) => {setQuestion1(e.target.value="0")}}                                           
+                                            onChange={(e) => {setQuestion1(e.target.value="0")}}
+                                            checked={questionList.q1 === 0}                                           
                                             />
                                     </span>
                                 </td>
@@ -153,6 +162,7 @@ const ResponseApp = () => {
                                             value="5"
                                             name="qestionnaire2"
                                             onChange={(e) => {setQuestion2(e.target.value="5")}}
+                                            checked={questionList.q2 === 5}
                                             /> 
                                             
                                     </span>
@@ -166,6 +176,7 @@ const ResponseApp = () => {
                                             value="4"
                                             name="qestionnaire2"
                                             onChange={(e) => {setQuestion2(e.target.value="4")}}
+                                            checked={questionList.q2 === 4}
                                             />
                                     </span>
                                 </td>
@@ -177,6 +188,7 @@ const ResponseApp = () => {
                                             value="3"
                                             name="qestionnaire2"
                                             onChange={(e) => {setQuestion2(e.target.value="3")}}
+                                            checked={questionList.q2 === 3}
                                             />
                                     </span>
                                 </td>
@@ -188,6 +200,7 @@ const ResponseApp = () => {
                                             value="2"
                                             name="qestionnaire2"
                                             onChange={(e) => {setQuestion2(e.target.value="2")}}
+                                            checked={questionList.q2 === 2}
                                             />
                                     </span>
                                 </td>
@@ -199,6 +212,7 @@ const ResponseApp = () => {
                                             value="1"
                                             name="qestionnaire2"
                                             onChange={(e) => {setQuestion2(e.target.value="1")}}
+                                            checked={questionList.q2 === 1}
                                             />
                                     </span>
                                 </td>
@@ -210,6 +224,7 @@ const ResponseApp = () => {
                                             value="0"
                                             name="qestionnaire2"
                                             onChange={(e) => {setQuestion2(e.target.value="0")}}
+                                            checked={questionList.q2 === 0}
                                             />
                                     </span>
                                 </td>
@@ -231,6 +246,7 @@ const ResponseApp = () => {
                                             value="5"
                                             name="qestionnaire3"
                                             onChange={(e) => {setQuestion3(e.target.value="5")}}
+                                            checked={questionList.q3 === 5}
                                             /> 
                                             
                                     </span>
@@ -244,6 +260,7 @@ const ResponseApp = () => {
                                             value="4"
                                             name="qestionnaire3"
                                             onChange={(e) => {setQuestion3(e.target.value="4")}}
+                                            checked={questionList.q3 === 4}
                                             />
                                     </span>
                                 </td>
@@ -255,6 +272,7 @@ const ResponseApp = () => {
                                             value="3"
                                             name="qestionnaire3"
                                             onChange={(e) => {setQuestion3(e.target.value="3")}}
+                                            checked={questionList.q3 === 3}
                                             />
                                     </span>
                                 </td>
@@ -266,6 +284,7 @@ const ResponseApp = () => {
                                             value="2"
                                             name="qestionnaire3"
                                             onChange={(e) => {setQuestion3(e.target.value="2")}}
+                                            checked={questionList.q3 === 2}
                                             />
                                     </span>
                                 </td>
@@ -277,6 +296,7 @@ const ResponseApp = () => {
                                             value="1"
                                             name="qestionnaire3"
                                             onChange={(e) => {setQuestion3(e.target.value="1")}}
+                                            checked={questionList.q3 === 1}
                                             />
                                     </span>
                                 </td>
@@ -288,6 +308,7 @@ const ResponseApp = () => {
                                             value="0"
                                             name="qestionnaire3"
                                             onChange={(e) => {setQuestion3(e.target.value="0")}}
+                                            checked={questionList.q3 === 0}
                                             />
                                     </span>
                                 </td>
@@ -309,6 +330,7 @@ const ResponseApp = () => {
                                             value="5"
                                             name="qestionnaire4"
                                             onChange={(e) => {setQuestion4(e.target.value="5")}}
+                                            checked={questionList.q4 === 5}
                                             />                                   
                                     </span>
                                 </td>
@@ -321,6 +343,7 @@ const ResponseApp = () => {
                                             value="4"
                                             name="qestionnaire4"
                                             onChange={(e) => {setQuestion4(e.target.value="4")}}
+                                            checked={questionList.q4 === 4}
                                             />
                                     </span>
                                 </td>
@@ -332,6 +355,7 @@ const ResponseApp = () => {
                                             value="3"
                                             name="qestionnaire4"
                                             onChange={(e) => {setQuestion4(e.target.value="3")}}
+                                            checked={questionList.q4 === 3}
                                             />
                                     </span>
                                 </td>
@@ -343,6 +367,7 @@ const ResponseApp = () => {
                                             value="2"
                                             name="qestionnaire4"
                                             onChange={(e) => {setQuestion4(e.target.value="2")}}
+                                            checked={questionList.q4 === 2}
                                             />
                                     </span>
                                 </td>
@@ -354,6 +379,7 @@ const ResponseApp = () => {
                                             value="1"
                                             name="qestionnaire4"
                                             onChange={(e) => {setQuestion4(e.target.value="1")}}
+                                            checked={questionList.q4 === 1}
                                             />
                                     </span>
                                 </td>
@@ -365,6 +391,7 @@ const ResponseApp = () => {
                                             value="0"
                                             name="qestionnaire4"
                                             onChange={(e) => {setQuestion4(e.target.value="0")}}
+                                            checked={questionList.q4 === 0}
                                             />
                                     </span>
                                 </td>
@@ -386,6 +413,7 @@ const ResponseApp = () => {
                                             value="5"
                                             name="qestionnaire5"
                                             onChange={(e) => {setQuestion5(e.target.value="5")}}
+                                            checked={questionList.q5 === 5}
                                             />                                          
                                     </span>
                                 </td>
@@ -398,6 +426,7 @@ const ResponseApp = () => {
                                             value="4"
                                             name="qestionnaire5"
                                             onChange={(e) => {setQuestion5(e.target.value="4")}}
+                                            checked={questionList.q5 === 4}
                                             />
                                     </span>
                                 </td>
@@ -409,6 +438,7 @@ const ResponseApp = () => {
                                             value="3"
                                             name="qestionnaire5"
                                             onChange={(e) => {setQuestion5(e.target.value="3")}}
+                                            checked={questionList.q5 === 3}
                                             />
                                     </span>
                                 </td>
@@ -420,6 +450,7 @@ const ResponseApp = () => {
                                             value="2"
                                             name="qestionnaire5"
                                             onChange={(e) => {setQuestion5(e.target.value="2")}}
+                                            checked={questionList.q5 === 2}
                                             />
                                     </span>
                                 </td>
@@ -431,6 +462,7 @@ const ResponseApp = () => {
                                             value="1"
                                             name="qestionnaire5"
                                             onChange={(e) => {setQuestion5(e.target.value="1")}}
+                                            checked={questionList.q5 === 1}
                                             />
                                     </span>
                                 </td>
@@ -442,6 +474,7 @@ const ResponseApp = () => {
                                             value="0"
                                             name="qestionnaire5"
                                             onChange={(e) => {setQuestion5(e.target.value="0")}}
+                                            checked={questionList.q5 === 0}
                                             />
                                     </span>
                                 </td>
