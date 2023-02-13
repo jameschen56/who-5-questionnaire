@@ -16,7 +16,7 @@ const RadioApp = () => {
   const submitReview = () => {
     Axios.post("http://localhost:3001/api/insert", {
 
-        status: '1',
+        status: 1,
         q1: question1,
         q2: question2,
         q3: question3,

@@ -15,7 +15,7 @@ This page is a WHO-5 questionnaire on patient portal. Users can fill this form a
 2. Install dependencies from the root directory.
 -- `npm install`
 
-3. Create a MySQL user, password, and database.
+3. Create a MySQL user `root`, password `root`, database `WHO5DataBase`, and create the corresponding tables in below database schema.
 
 
 4. Start the serveices in the backend directory.
