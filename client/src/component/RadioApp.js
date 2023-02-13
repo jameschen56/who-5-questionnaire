@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Link } from "react-router-dom"; 
 import Axios from 'axios'
 
 const RadioApp = () => {
@@ -10,9 +11,6 @@ const RadioApp = () => {
     const [question5, setQuestion5] = useState('')
     const [questionList, setQuestionList] = useState([])
 
-
-  // handle submit 
-  // const onSubmit = data => alert("Thank you for completing questionnaire!");
 
   // submit review
   const submitReview = () => {
@@ -27,9 +25,10 @@ const RadioApp = () => {
 
     })
 
-    console.log('xxxxxxxxxxxxxxxx', question1)
-
+    
     setQuestionList([...questionList, {status: "1", question1: question1, question2: question2, question3:question3, question4:question4, question5:question5}])
+    console.log('xxxxxxxxxxxxxxxx', setQuestionList)
+
   }
 
   // validating data
@@ -87,6 +86,7 @@ const RadioApp = () => {
 
     if (check1 && check2 && check3 && check4 && check5 ) {
         alert("Thank you for completing questionnaire!");
+        document.getElementById('myFrom').reset();
     }
     else  {
         alert("Please select a field");
@@ -96,7 +96,7 @@ const RadioApp = () => {
 
   return (
 
-      <form onSubmit={validate} className='border-solid border-8 border-slate-200 m-8 '>
+      <form onSubmit={validate} className='border-solid border-8 border-slate-200 m-8' id='myFrom'>
         <div className='mb-8'>
             {/*header section */}
             <div>
@@ -198,7 +198,8 @@ const RadioApp = () => {
                                             <input 
                                                 type="radio" 
                                                 className="peer relative left-20 h-4 w-5 cursor-pointer top-2"
-                                                value="0"     
+                                                value="0" 
+                                                name="qestionnaire1"    
                                                 onChange={(e) => {setQuestion1(e.target.value="0")}}                                           
                                                 />
                                         </span>
@@ -527,11 +528,12 @@ const RadioApp = () => {
             </div>
              {/* view section */ }
             <span className='relative justify-start m-6 top-5 ml-10'>
-                <input
+                <Link
                     type="submit"
                     value="View"
-                    className='w-32 h-10 bg-teal-600 text-white font-bold rounded-lg cursor-pointer'  
-                />
+                    className='w-32 h-10 bg-teal-600 text-white text-center inline-block align-middle font-bold rounded-lg cursor-pointer'  
+                    to="/qestionnaire"
+                >View </Link>
             </span>
             {/* submit section */ }
             <span className='ml-40'>

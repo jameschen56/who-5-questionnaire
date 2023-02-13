@@ -17,13 +17,21 @@ app.use(express.json())
 app.use(bodyParser.urlencoded({extended: true}));
 
 
+// ------------- get questionnaire --------------
 app.get("/api/get", (req, res) => {
     const sqlSelect = "SELECT * FROM who5";
     db.query(sqlSelect, (err, result) => {
-        res.send(result)
+        if (err) {
+            console.log('err', err)
+        } else{
+            console.log('------------', result)
+            res.send(result)
+        }
     })
 })
 
+
+// ------------- submit questionnaire --------------
 app.post("/api/insert", (req, res) => {
     
     const status = req.body.status
@@ -35,8 +43,13 @@ app.post("/api/insert", (req, res) => {
 
     const sqlInsert = "INSERT INTO who5 (status, q1, q2, q3, q4, q5) VALUES (?,?,?,?,?,?)"
     db.query(sqlInsert, [status, q1, q2, q3, q4, q5], (err, result) => {
-        console.log('------result-------', result)
-        console.log('-------err---------', err)
+        if (err) {
+            console.log('err', err)
+        } else {
+            console.log('---------------------', res)
+            console.log('*********************', result)
+            res.status(200).send("registration successful");
+        }
     })
 })
 
