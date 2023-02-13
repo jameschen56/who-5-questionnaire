@@ -10,7 +10,7 @@ This page is a WHO-5 questionnaire on patient portal. Users can fill this form a
 
 # Getting started
 1. Clone this repo.
--- `git repo clone https://github.com/jameschen56/who-5-questionnaire`
+-- `git clone https://github.com/jameschen56/who-5-questionnaire`
 
 2. Install dependencies from the root directory.
 -- `npm install`
